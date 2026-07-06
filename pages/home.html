@@ -80,19 +80,21 @@
   .wagc-cta { padding: 56px 5%; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; text-align: center; }
   .wagc-cta h2 { color: #f4ecd8 !important; font-size: 26px; margin-bottom: 10px; }
   .wagc-cta p { color: #cfe0d5 !important; font-size: 14px; margin-bottom: 26px; }
-  .wagc-final-section { padding: 64px 5%; background: #fff; }
-  .wagc-final-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1180px; margin: 0 auto; }
-  .wagc-final-video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 1px 3px rgba(11,61,46,0.08); }
+  .wagc-final-section { padding: 68px 5%; background: repeating-linear-gradient(115deg, rgba(11,61,46,0.025) 0px, rgba(11,61,46,0.025) 2px, transparent 2px, transparent 34px), #f7f6f2; }
+  .wagc-final-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; max-width: 1180px; margin: 0 auto; }
+  .wagc-final-video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 0 0 3px rgba(201,162,39,0.55), 0 16px 40px rgba(11,61,46,0.22); }
   .wagc-final-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-  .wagc-final-text h2 { font-size: 26px; color: #2c2c2a !important; margin-bottom: 14px; }
-  .wagc-final-text p { font-size: 15px; line-height: 1.7; color: #444341; margin: 0 0 18px; }
-  .wagc-final-list { list-style: none; margin: 0; padding: 0; }
-  .wagc-final-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; color: #2c2c2a; padding: 9px 0; border-top: 1px solid #eee8da; }
-  .wagc-final-list li:first-child { border-top: none; }
-  .wagc-final-list svg { flex: 0 0 auto; margin-top: 2px; }
-  .wagc-map-wrap { max-width: 1180px; margin: 34px auto 0; }
-  .wagc-map-wrap h3 { font-size: 18px; color: #0b3d2e !important; margin-bottom: 14px; text-align: center; }
-  #wagcCoursesMap { height: 420px; border-radius: 8px; box-shadow: 0 1px 3px rgba(11,61,46,0.08); }
+  .wagc-final-eyebrow { font-size: 12px; letter-spacing: 3px; color: #c9a227 !important; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+  .wagc-final-text h2 { font-size: 30px; color: #2c2c2a !important; margin-bottom: 8px; position: relative; padding-bottom: 16px; }
+  .wagc-final-text h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 60px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #e8c766, #c9a227); }
+  .wagc-final-text p { font-size: 15px; line-height: 1.7; color: #444341; margin: 18px 0 22px; }
+  .wagc-final-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .wagc-final-list li { display: flex; align-items: center; gap: 14px; font-size: 14px; font-weight: 600; line-height: 1.4; color: #2c2c2a; background: #fff; border-left: 3px solid #c9a227; border-radius: 0 8px 8px 0; padding: 13px 16px; box-shadow: 0 1px 4px rgba(11,61,46,0.07); transition: transform 0.15s, box-shadow 0.15s; }
+  .wagc-final-list li:hover { transform: translateX(3px); box-shadow: 0 4px 12px rgba(11,61,46,0.12); }
+  .wagc-final-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
+  .wagc-map-wrap { max-width: 1180px; margin: 40px auto 0; }
+  .wagc-map-wrap h3 { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #0b3d2e !important; margin-bottom: 16px; text-align: center; }
+  #wagcCoursesMap { height: 420px; border-radius: 10px; box-shadow: 0 0 0 3px rgba(201,162,39,0.35), 0 10px 28px rgba(11,61,46,0.15); }
   @media (max-width: 900px) { .wagc-final-grid { grid-template-columns: 1fr; } }
   html { overflow-x: hidden; }
   .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-hero, .wagc-stats, .wagc-section, .wagc-final-section, .wagc-cta { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }
@@ -242,14 +244,15 @@
         <iframe src="https://www.youtube-nocookie.com/embed/9FGxn6mqEiU?start=44" title="2026 WAGC World Final host courses" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="wagc-final-text">
+        <div class="wagc-final-eyebrow">2026 World Final &middot; Johor Bahru, Malaysia</div>
         <h2>Five courses, one World Final</h2>
-        <p>Flight winners from every WAGC region advance to the 2026 World Final in Johor Bahru, Malaysia, where the championship is contested across five courses:</p>
+        <p>Flight winners from every WAGC region advance to the 2026 World Final, where the championship is contested across five courses:</p>
         <ul class="wagc-final-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> The Els Club Desaru Coast &ndash; Ocean Course</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> The Els Club Desaru Coast &ndash; Valley Course</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Forest City Golf Resort &ndash; Legacy Course</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Forest City Golf Resort &ndash; Classic Course</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Tanjong Puteri Golf Resort &ndash; Signature Championship Course</li>
+          <li><span class="wagc-final-num">1</span> The Els Club Desaru Coast &ndash; Ocean Course</li>
+          <li><span class="wagc-final-num">2</span> The Els Club Desaru Coast &ndash; Valley Course</li>
+          <li><span class="wagc-final-num">3</span> Forest City Golf Resort &ndash; Legacy Course</li>
+          <li><span class="wagc-final-num">4</span> Forest City Golf Resort &ndash; Classic Course</li>
+          <li><span class="wagc-final-num">5</span> Tanjong Puteri Golf Resort &ndash; Signature Championship Course</li>
         </ul>
       </div>
     </div>

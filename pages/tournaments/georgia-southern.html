@@ -3,9 +3,9 @@
   .wagc-redesign * { box-sizing: border-box; }
   .wagc-redesign h1, .wagc-redesign h2 { font-family: 'Playfair Display', Georgia, serif; margin: 0; }
   .wagc-redesign a { text-decoration: none; }
-  .wagc-btn-primary { display: inline-block; background: #c9a227; color: #2c2205 !important; border: none; padding: 13px 28px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .wagc-btn-primary { display: inline-block; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; border: none; padding: 13px 28px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
   .wagc-ticker { display: flex; align-items: center; background: #08291f; color: #f4ecd8; overflow: hidden; white-space: nowrap; padding: 7px 0; }
-  .wagc-ticker-label { flex: 0 0 auto; background: #c9a227; color: #2c2205 !important; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 4px 16px; margin-right: 16px; border-radius: 0 4px 4px 0; text-transform: uppercase; }
+  .wagc-ticker-label { flex: 0 0 auto; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 4px 16px; margin-right: 16px; border-radius: 0 4px 4px 0; text-transform: uppercase; }
   .wagc-ticker-viewport { overflow: hidden; flex: 1 1 auto; }
   .wagc-ticker-track { display: inline-flex; gap: 40px; animation: wagcTickerScroll 160s linear infinite; will-change: transform; }
   .wagc-ticker:hover .wagc-ticker-track { animation-play-state: paused; }
@@ -33,8 +33,8 @@
   .wagc-nav-item:hover .wagc-dropdown { display: block; }
   .wagc-dropdown a { display: block; padding: 9px 18px; color: #2c2c2a !important; font-size: 13px; font-weight: 400 !important; }
   .wagc-dropdown a:hover { background: #f7f6f2; color: #0b3d2e !important; }
-  .wagc-nav-cta { background: #c9a227; color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; }
-  .wagc-td-hero { background: #0b3d2e; padding: 40px 5% 34px; }
+  .wagc-nav-cta { background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
+  .wagc-td-hero { background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; padding: 40px 5% 34px; }
   .wagc-td-hero-inner { max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
   .wagc-td-logo { width: 96px; height: 96px; border-radius: 12px; background: #fff; padding: 8px; object-fit: contain; flex: 0 0 auto; }
   .wagc-td-hero-text { flex: 1 1 320px; }
@@ -46,10 +46,10 @@
   .wagc-td-status .wagc-status-badge { font-size: 12px; padding: 5px 16px; }
   .wagc-td-status .wagc-status-closes { display: block; margin-top: 8px; color: #e3f0e8 !important; font-size: 12px; }
   .wagc-status-badge { display: inline-block; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 20px; }
-  .wagc-status-badge.open { background: #e2f3e6; color: #1f7a3d !important; }
+  .wagc-status-badge.open { background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; }
   .wagc-status-badge.closed { background: #f3e2e2; color: #a33333 !important; }
   .wagc-td-wrap { padding: 50px 5% 70px; background: #f7f6f2; }
-  .wagc-td-card { max-width: 980px; margin: 0 auto; background: #fff; border: 1px solid #e5e1d8; border-radius: 12px; padding: 34px; display: flex; gap: 40px; flex-wrap: wrap; }
+  .wagc-td-card { max-width: 980px; margin: 0 auto; background: #fff; border-top: 3px solid #c9a227; border-radius: 0 0 12px 12px; padding: 34px; display: flex; gap: 40px; flex-wrap: wrap; box-shadow: 0 1px 3px rgba(11,61,46,0.07); }
   .wagc-td-facts { flex: 1 1 280px; margin: 0; }
   .wagc-td-facts dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #8a887f; margin-top: 16px; }
   .wagc-td-facts dt:first-child { margin-top: 0; }
@@ -63,7 +63,7 @@
   .wagc-td-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 4px; }
   .wagc-td-back { max-width: 980px; margin: 24px auto 0; text-align: center; }
   .wagc-td-back a { font-size: 13px; color: #0b3d2e !important; font-weight: 600; }
-  .wagc-cta { padding: 56px 5%; background: #0b3d2e; text-align: center; }
+  .wagc-cta { padding: 56px 5%; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; text-align: center; }
   .wagc-cta h2 { color: #f4ecd8 !important; font-size: 26px; margin-bottom: 10px; }
   .wagc-cta p { color: #cfe0d5 !important; font-size: 14px; margin-bottom: 26px; }
   .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-td-hero, .wagc-td-wrap, .wagc-cta { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }

@@ -4,10 +4,10 @@
   .wagc-redesign h1, .wagc-redesign h2 { font-family: 'Playfair Display', Georgia, serif; margin: 0; }
   .wagc-redesign a { text-decoration: none; }
   .et_pb_row_1 { display: none !important; }
-  .wagc-btn-primary { display: inline-block; background: #c9a227; color: #2c2205 !important; border: none; padding: 13px 28px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .wagc-btn-primary { display: inline-block; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; border: none; padding: 13px 28px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
   .wagc-btn-secondary { display: inline-block; background: transparent; color: #f4ecd8 !important; border: 1px solid #cfe0d5; padding: 12px 27px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
   .wagc-ticker { display: flex; align-items: center; background: #08291f; color: #f4ecd8; overflow: hidden; white-space: nowrap; padding: 7px 0; }
-  .wagc-ticker-label { flex: 0 0 auto; background: #c9a227; color: #2c2205 !important; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 4px 16px; margin-right: 16px; border-radius: 0 4px 4px 0; text-transform: uppercase; }
+  .wagc-ticker-label { flex: 0 0 auto; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 4px 16px; margin-right: 16px; border-radius: 0 4px 4px 0; text-transform: uppercase; }
   .wagc-ticker-viewport { overflow: hidden; flex: 1 1 auto; }
   .wagc-ticker-track { display: inline-flex; gap: 40px; animation: wagcTickerScroll 160s linear infinite; will-change: transform; }
   .wagc-ticker:hover .wagc-ticker-track { animation-play-state: paused; }
@@ -35,8 +35,8 @@
   .wagc-nav-item:hover .wagc-dropdown { display: block; }
   .wagc-dropdown a { display: block; padding: 9px 18px; color: #2c2c2a !important; font-size: 13px; font-weight: 400 !important; }
   .wagc-dropdown a:hover { background: #f7f6f2; color: #0b3d2e !important; }
-  .wagc-nav-cta { background: #c9a227; color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; }
-  .wagc-hero { position: relative; min-height: 660px; display: flex; align-items: flex-end; padding: 60px 5% 60px; text-align: left; background: #0b3d2e; overflow: hidden; }
+  .wagc-nav-cta { background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
+  .wagc-hero { position: relative; min-height: 660px; display: flex; align-items: flex-end; padding: 60px 5% 60px; text-align: left; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; overflow: hidden; }
   .wagc-hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: wagcHeroFade 18s infinite; }
   .wagc-hero-slide:nth-child(1) { background-image: url('https://wagc.us/wp-content/uploads/2025/01/1D40D224-8EAA-4CF2-A4A5-39AF4A221638_1_105_c.jpeg'); animation-delay: 0s; }
   .wagc-hero-slide:nth-child(2) { background-image: url('https://wagc.us/wp-content/uploads/2023/02/PS702103-scaled.jpg'); animation-delay: 6s; }
@@ -63,7 +63,7 @@
   .wagc-section-title { font-size: 26px; text-align: center; margin-bottom: 8px; color: #2c2c2a !important; }
   .wagc-section-sub { font-size: 14px; color: #5f5e5a !important; text-align: center; margin-bottom: 40px; }
   .wagc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .wagc-step-card { background: #f7f6f2; border-radius: 8px; padding: 30px 24px; text-align: center; }
+  .wagc-step-card { background: #fff; border-top: 3px solid #c9a227; border-radius: 0 0 8px 8px; padding: 30px 24px; text-align: center; box-shadow: 0 1px 3px rgba(11,61,46,0.06); }
   .wagc-step-card svg { margin-bottom: 14px; }
   .wagc-step-card h3 { font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #2c2c2a !important; }
   .wagc-step-card p { font-size: 14px; color: #5f5e5a !important; line-height: 1.6; margin: 0; }
@@ -71,13 +71,13 @@
   .wagc-tourn-head h2 { font-size: 24px; color: #2c2c2a !important; }
   .wagc-tourn-head a { font-size: 14px; color: #0b3d2e !important; font-weight: 600; }
   .wagc-tourn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .wagc-tourn-card { background: #fff; border: 1px solid #e5e1d8; border-radius: 8px; overflow: hidden; }
+  .wagc-tourn-card { background: #fff; border-top: 3px solid #c9a227; border-radius: 0 0 8px 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(11,61,46,0.06); }
   .wagc-tourn-img { height: 110px; background: #cfe0d5 center/cover no-repeat; }
   .wagc-tourn-body { padding: 16px; }
   .wagc-tourn-tag { font-size: 11px; color: #0b3d2e !important; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; }
   .wagc-tourn-name { font-size: 15px; font-weight: 600; color: #2c2c2a !important; }
   .wagc-tourn-date { font-size: 13px; color: #5f5e5a !important; margin-top: 6px; }
-  .wagc-cta { padding: 56px 5%; background: #0b3d2e; text-align: center; }
+  .wagc-cta { padding: 56px 5%; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; text-align: center; }
   .wagc-cta h2 { color: #f4ecd8 !important; font-size: 26px; margin-bottom: 10px; }
   .wagc-cta p { color: #cfe0d5 !important; font-size: 14px; margin-bottom: 26px; }
   .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-hero, .wagc-stats, .wagc-section, .wagc-cta { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }

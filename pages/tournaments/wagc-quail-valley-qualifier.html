@@ -1,0 +1,224 @@
+<style>
+  .wagc-redesign { font-family: 'Inter', -apple-system, Helvetica, Arial, sans-serif; color: #2c2c2a; }
+  .wagc-redesign * { box-sizing: border-box; }
+  .wagc-redesign h1, .wagc-redesign h2 { font-family: 'Playfair Display', Georgia, serif; margin: 0; }
+  .wagc-redesign a { text-decoration: none; }
+  .wagc-btn-primary { display: inline-block; background: #c9a227; color: #2c2205 !important; border: none; padding: 13px 28px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .wagc-ticker { display: flex; align-items: center; background: #08291f; color: #f4ecd8; overflow: hidden; white-space: nowrap; padding: 7px 0; }
+  .wagc-ticker-label { flex: 0 0 auto; background: #c9a227; color: #2c2205 !important; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 4px 16px; margin-right: 16px; border-radius: 0 4px 4px 0; text-transform: uppercase; }
+  .wagc-ticker-viewport { overflow: hidden; flex: 1 1 auto; }
+  .wagc-ticker-track { display: inline-flex; gap: 40px; animation: wagcTickerScroll 160s linear infinite; will-change: transform; }
+  .wagc-ticker:hover .wagc-ticker-track { animation-play-state: paused; }
+  .wagc-ticker-item { display: inline-flex; align-items: center; gap: 8px; color: #f4ecd8 !important; font-size: 12px; }
+  .wagc-ticker-source { font-weight: 700; color: #d9b84a !important; font-size: 10px; letter-spacing: 0.5px; }
+  @keyframes wagcTickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .wagc-ticker-track { animation: none; } .wagc-ticker-viewport { overflow-x: auto; } }
+  .wagc-topbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 5%; background: #08291f; color: #cfe0d5; font-size: 12px; flex-wrap: wrap; gap: 8px; }
+  .wagc-topbar a { color: #cfe0d5 !important; }
+  .wagc-social { display: flex; align-items: center; gap: 6px; }
+  .wagc-social a { display: flex; align-items: center; justify-content: center; width: 39px; height: 39px; border-radius: 50%; background: rgba(244,236,216,0.12); color: #cfe0d5 !important; transition: background 0.15s; }
+  .wagc-social a:hover { background: rgba(244,236,216,0.25); }
+  .wagc-social svg { width: 21px; height: 21px; fill: currentColor; }
+  .wagc-mainnav { display: flex; align-items: center; justify-content: space-between; padding: 12px 5%; background: #0b3d2e; flex-wrap: wrap; gap: 16px; }
+  .wagc-logo { display: flex; align-items: center; gap: 16px; }
+  .wagc-logo img.wagc-logo-round { height: 70px; width: 70px; }
+  .wagc-logo-divider { width: 1px; height: 46px; background: rgba(244,236,216,0.25); }
+  .wagc-logo-usa { background: #fff; border-radius: 8px; padding: 5px 8px; display: flex; align-items: center; }
+  .wagc-logo-usa img { height: 46px; width: auto; display: block; }
+  .wagc-nav { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+  .wagc-nav-item { position: relative; }
+  .wagc-nav-item > a, .wagc-nav-item > span { color: #f4ecd8 !important; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+  .wagc-nav-item:hover > a, .wagc-nav-item:hover > span { color: #d9b84a !important; }
+  .wagc-dropdown { display: none; position: absolute; top: 100%; left: 0; margin-top: 14px; background: #fff; min-width: 190px; border-radius: 6px; padding: 8px 0; box-shadow: 0 10px 28px rgba(0,0,0,0.18); z-index: 20; }
+  .wagc-nav-item:hover .wagc-dropdown { display: block; }
+  .wagc-dropdown a { display: block; padding: 9px 18px; color: #2c2c2a !important; font-size: 13px; font-weight: 400 !important; }
+  .wagc-dropdown a:hover { background: #f7f6f2; color: #0b3d2e !important; }
+  .wagc-nav-cta { background: #c9a227; color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; }
+  .wagc-td-hero { background: #0b3d2e; padding: 40px 5% 34px; }
+  .wagc-td-hero-inner { max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+  .wagc-td-logo { width: 96px; height: 96px; border-radius: 12px; background: #fff; padding: 8px; object-fit: contain; flex: 0 0 auto; }
+  .wagc-td-hero-text { flex: 1 1 320px; }
+  .wagc-td-hero .wagc-eyebrow { font-size: 12px; letter-spacing: 3px; color: #d9b84a !important; margin-bottom: 10px; text-transform: uppercase; }
+  .wagc-td-hero h1 { font-size: 28px; color: #f4ecd8 !important; margin-bottom: 8px; }
+  .wagc-td-hero-meta { font-size: 14px; color: #e3f0e8 !important; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .wagc-td-hero-meta span.wagc-sched-tour { display: inline-block; background: rgba(244,236,216,0.18); color: #f4ecd8 !important; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .wagc-td-status { flex: 0 0 auto; text-align: center; background: rgba(0,0,0,0.15); border-radius: 10px; padding: 16px 22px; }
+  .wagc-td-status .wagc-status-badge { font-size: 12px; padding: 5px 16px; }
+  .wagc-td-status .wagc-status-closes { display: block; margin-top: 8px; color: #e3f0e8 !important; font-size: 12px; }
+  .wagc-status-badge { display: inline-block; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 20px; }
+  .wagc-status-badge.open { background: #e2f3e6; color: #1f7a3d !important; }
+  .wagc-status-badge.closed { background: #f3e2e2; color: #a33333 !important; }
+  .wagc-td-wrap { padding: 50px 5% 70px; background: #f7f6f2; }
+  .wagc-td-card { max-width: 980px; margin: 0 auto; background: #fff; border: 1px solid #e5e1d8; border-radius: 12px; padding: 34px; display: flex; gap: 40px; flex-wrap: wrap; }
+  .wagc-td-facts { flex: 1 1 280px; margin: 0; }
+  .wagc-td-facts dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #8a887f; margin-top: 16px; }
+  .wagc-td-facts dt:first-child { margin-top: 0; }
+  .wagc-td-facts dd { margin: 3px 0 0; font-size: 15px; color: #2c2c2a; font-weight: 600; }
+  .wagc-td-side { flex: 1 1 260px; display: flex; flex-direction: column; gap: 16px; }
+  .wagc-td-side-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #8a887f; }
+  .wagc-td-price-list { list-style: none; margin: 4px 0 0; padding: 0; border-top: 1px solid #e5e1d8; }
+  .wagc-td-price-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e5e1d8; font-size: 14px; }
+  .wagc-td-price-list li span:last-child { font-weight: 700; color: #0b3d2e; white-space: nowrap; }
+  .wagc-td-desc { font-size: 14px; line-height: 1.6; color: #5f5e5a; margin: 26px auto 0; max-width: 980px; }
+  .wagc-td-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 4px; }
+  .wagc-td-back { max-width: 980px; margin: 24px auto 0; text-align: center; }
+  .wagc-td-back a { font-size: 13px; color: #0b3d2e !important; font-weight: 600; }
+  .wagc-cta { padding: 56px 5%; background: #0b3d2e; text-align: center; }
+  .wagc-cta h2 { color: #f4ecd8 !important; font-size: 26px; margin-bottom: 10px; }
+  .wagc-cta p { color: #cfe0d5 !important; font-size: 14px; margin-bottom: 26px; }
+  .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-td-hero, .wagc-td-wrap, .wagc-cta { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }
+  #main-header { display: none !important; }
+  #page-container { padding-top: 0 !important; }
+  @media (max-width: 980px) { .wagc-nav { gap: 16px; } .wagc-dropdown { position: static; box-shadow: none; margin-top: 4px; padding-left: 12px; } }
+  @media (max-width: 700px) { .wagc-td-hero-inner { justify-content: center; text-align: center; } .wagc-td-status { margin: 0 auto; } .wagc-td-card { justify-content: center; text-align: center; } .wagc-td-facts, .wagc-td-side { text-align: left; } }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<div class="wagc-redesign">
+
+  <div class="wagc-topbar">
+    <div style="display:flex; gap:18px; flex-wrap:wrap;">
+      <span>&#9742; (978) 309-9242</span>
+      <span>&#9993; info@wagc.us</span>
+    </div>
+    <div class="wagc-social">
+      <a href="https://www.facebook.com/WAGCUS" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+    </div>
+  </div>
+
+  <div class="wagc-mainnav">
+    <a class="wagc-logo" href="https://wagc.techcareer.se/">
+      <img class="wagc-logo-round" src="https://wagc.us/wp-content/uploads/2025/01/WAGC-2025-Logo-300x300.png" alt="World Amateur Golfers Championship">
+      <div class="wagc-logo-divider"></div>
+      <div class="wagc-logo-usa">
+        <img src="https://wagc.us/wp-content/uploads/2017/08/wagc-logo-team-usa.png" alt="Team USA">
+      </div>
+    </a>
+    <nav class="wagc-nav">
+      <div class="wagc-nav-item"><a href="https://wagc.techcareer.se/index.php/tournaments/">Tournaments</a></div>
+      <div class="wagc-nav-item">
+        <span>Standings &#9662;</span>
+        <div class="wagc-dropdown">
+          <a href="#">Regions</a>
+          <a href="#">Handicaps</a>
+        </div>
+      </div>
+      <div class="wagc-nav-item"><a href="#">Majors</a></div>
+      <div class="wagc-nav-item"><a href="#">Membership</a></div>
+      <div class="wagc-nav-item">
+        <span>About &#9662;</span>
+        <div class="wagc-dropdown">
+          <a href="https://wagc.techcareer.se/index.php/about-wagc/">About WAGC</a>
+          <a href="#">Testimonials</a>
+          <a href="#">News</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+      <a href="#" class="wagc-nav-cta">Join today</a>
+    </nav>
+  </div>
+
+  <div class="wagc-ticker" id="wagcTicker">
+    <span class="wagc-ticker-label">Latest news</span>
+    <div class="wagc-ticker-viewport">
+      <div class="wagc-ticker-track" id="wagcTickerTrack"><span class="wagc-ticker-item">Loading golf news&hellip;</span></div>
+    </div>
+  </div>
+
+  <div class="wagc-td-hero">
+    <div class="wagc-td-hero-inner">
+      <img class="wagc-td-logo" src="https://ddz5qbrxrbzp.cloudfront.net/uploads/asset/image/9969881243036173341/large_490d810a-9644-40c3-9e6a-c6b2b7d1c2f2.png" alt="WAGC Quail Valley Qualifier logo">
+      <div class="wagc-td-hero-text">
+        <div class="wagc-eyebrow">World Amateur Golfers Championship &mdash; TX - Houston</div>
+        <h1>WAGC Quail Valley Qualifier</h1>
+        <div class="wagc-td-hero-meta">
+          <span class="wagc-sched-tour">TX - Houston</span>
+          <span>Sat, Jul 18, 2026</span>
+          <span>TX - Quail Valley El Dorado</span>
+        </div>
+      </div>
+      <div class="wagc-td-status">
+        <span class="wagc-status-badge open">Open</span>
+        <span class="wagc-status-closes">closes on THU, JUL 16 5:00 PM EDT</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wagc-td-wrap">
+    <div class="wagc-td-card">
+      <dl class="wagc-td-facts">
+        <dt>Dates</dt>
+        <dd>Sat, Jul 18, 2026</dd>
+        <dt>Next Round</dt>
+        <dd>Sat, Jul 18, 2026</dd>
+        <dt>Course</dt>
+        <dd>TX - Quail Valley El Dorado</dd>
+        <dt>Region / Tour</dt>
+        <dd>TX - Houston</dd>
+      </dl>
+      <div class="wagc-td-side">
+        <div>
+          <div class="wagc-td-side-label">Entry fees</div>
+          <ul class="wagc-td-price-list"><li><span>WAGC  Paid member Tournament Registration</span><span>$180.00 for the entire registration</span></li></ul>
+        </div>
+        <div class="wagc-td-actions">
+          <a href="https://www.golfgenius.com/register?autoregister=true&amp;league_id=12368202290241226198" target="_blank" rel="noopener" class="wagc-btn-primary">Register</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wagc-td-back"><a href="https://wagc.techcareer.se/index.php/tournaments/">&larr; Back to full schedule</a></div>
+  </div>
+
+  <section class="wagc-cta">
+    <h2>Ready to compete for Team USA?</h2>
+    <p>Membership starts at $100/year &mdash; includes local, regional, and national eligibility.</p>
+    <a href="#" class="wagc-btn-primary">Join today</a>
+  </section>
+</div>
+
+<script>
+(function(){
+  var track = document.getElementById('wagcTickerTrack');
+  var ticker = document.getElementById('wagcTicker');
+  if (!track) return;
+
+  var results = [[], [], [], [], [], [], [], [], []];
+  var rendered = false;
+
+  function render() {
+    var top = results.reduce(function(a,b){ return a.concat(b); }, []);
+    if (!top.length) return;
+    rendered = true;
+    var html = top.map(function(it){
+      var safeTitle = String(it.title).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+      return '<a class="wagc-ticker-item" href="' + it.link + '" target="_blank" rel="noopener">' +
+             '<span class="wagc-ticker-source">' + it.source + '</span>' + safeTitle + '</a>';
+    }).join('');
+    track.innerHTML = html + html;
+  }
+
+  function rssProxied(u) { return 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(u); }
+
+  function fromRss(url, source, limit) {
+    return fetch(rssProxied(url)).then(function(r){ return r.json(); }).then(function(data){
+      if (!data || data.status !== 'ok' || !data.items) return [];
+      return data.items.slice(0, limit).map(function(it){
+        return { title: it.title, link: it.link, source: source };
+      });
+    }).catch(function(){ return []; });
+  }
+
+  fromRss('https://mediacenter.usga.org/press-releases?pagetemplate=rss', 'USGA', 3).then(function(items){ results[0] = items; render(); });
+  fromRss('https://golf.com/feed/', 'GOLF.com', 2).then(function(items){ results[1] = items; render(); });
+  fromRss('https://rss.app/feeds/fEdWsk8WP50jOx1G.xml', 'PGA TOUR', 2).then(function(items){ results[2] = items; render(); });
+  fromRss('https://rss.app/feeds/0ZmasxRVI5ynFU4U.xml', 'LPGA', 2).then(function(items){ results[3] = items; render(); });
+  fromRss('https://rss.app/feeds/XhvB4D9KsxVZCuSg.xml', 'Golf Channel', 2).then(function(items){ results[4] = items; render(); });
+  fromRss('https://rss.app/feeds/ixGyrUVplOYy3gvI.xml', 'Golf Digest', 2).then(function(items){ results[5] = items; render(); });
+  fromRss('https://rss.app/feeds/nBteHhkIyYI4CDYh.xml', 'Golfweek', 2).then(function(items){ results[6] = items; render(); });
+  fromRss('https://rss.app/feeds/KubskZFVk76VzJEk.xml', 'DP World Tour', 2).then(function(items){ results[7] = items; render(); });
+  fromRss('https://rss.app/feeds/xYEXATCSie8aclgt.xml', 'The R&A', 3).then(function(items){ results[8] = items; render(); });
+
+  setTimeout(function(){ if (!rendered && ticker) ticker.style.display = 'none'; }, 12000);
+})();
+</script>

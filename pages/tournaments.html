@@ -58,7 +58,7 @@
   .wagc-sched-cta { flex: 0 0 auto; }
   .wagc-sched-cta a { display: inline-block; background: #B31942; color: #fff !important; padding: 10px 20px; border-radius: 4px; font-size: 13px; font-weight: 600; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
   .wagc-sched-cta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-  .wagc-sched-view { font-size: 12px; font-weight: 600; color: #0C3B6E !important; }
+  .wagc-sched-cta a.wagc-sched-view { display: inline; background: none; padding: 0; border-radius: 0; box-shadow: none; font-size: 12px; font-weight: 600; color: #0C3B6E !important; }
   .wagc-sched-view:hover { text-decoration: underline; }
   @media (max-width: 700px) { .wagc-sched-cta { align-items: center; } }
   .wagc-sched-note { max-width: 980px; margin: 30px auto 0; font-size: 13px; color: #5f5e5a; text-align: center; }
@@ -360,6 +360,7 @@
 
   function render() {
     var top = results.reduce(function(a,b){ return a.concat(b); }, []);
+    top = top.filter(function(it){ var t = String(it.title || ""); return t.length > 0 && t.length < 160 && t.indexOf(".css-") === -1 && t.indexOf("{") === -1; });
     if (!top.length) return;
     rendered = true;
     var html = top.map(function(it){

@@ -37,7 +37,7 @@
   .wagc-dropdown a:hover { background: #f7f6f2; color: #0b3d2e !important; }
   .wagc-nav-cta { background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
   .wagc-nav-toggle { display: none; background: none; border: none; color: #f4ecd8; font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 6px; }
-  .wagc-hero { position: relative; min-height: 660px; display: flex; align-items: flex-end; padding: 60px 5% 60px; text-align: left; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; overflow: hidden; }
+  .wagc-hero { position: relative; min-height: clamp(480px, calc(100vh - 160px), 660px); display: flex; align-items: flex-end; padding: 60px 5% 60px; text-align: left; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; overflow: hidden; }
   .wagc-hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: wagcHeroFade 18s infinite; }
   .wagc-hero-slide:nth-child(1) { background-image: url('https://wagc.techcareer.se/wp-content/uploads/2026/07/els-hero.png'); animation-delay: 0s; }
   .wagc-hero-slide:nth-child(2) { background-image: url('https://wagc.techcareer.se/wp-content/uploads/2026/07/els-hero02.png'); animation-delay: 6s; }
@@ -54,7 +54,7 @@
   .wagc-hero-badge-place { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 25px; line-height: 1.15; letter-spacing: 0.3px; background: linear-gradient(90deg, #8fb4ff 0%, #f588a3 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; margin-bottom: 12px; }
   .wagc-hero-badge-date { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px; color: #d9b84a !important; letter-spacing: 0.5px; }
   .wagc-hero-badge-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #cfe0d5 !important; margin-top: 12px; text-transform: uppercase; opacity: 0.8; }
-  @media (max-width: 700px) { .wagc-hero-badge { position: static; margin: 0 auto 24px; transform: none; width: 250px; height: 250px; } }
+  @media (max-width: 700px) { .wagc-hero { flex-direction: column; align-items: center; text-align: center; } .wagc-hero-badge { position: static; margin: 0 auto 24px; transform: none; width: 250px; height: 250px; } .wagc-hero-inner { max-width: 100%; } .wagc-hero-ctas { justify-content: center; } }
   .wagc-stats { display: grid; grid-template-columns: repeat(4, 1fr); background: #f4ecd8; text-align: center; }
   .wagc-stats div { padding: 28px 10px; border-right: 1px solid #ddd0ab; }
   .wagc-stats div:last-child { border-right: none; }

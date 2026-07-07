@@ -375,6 +375,7 @@
 
   function render() {
     var top = results.reduce(function(a,b){ return a.concat(b); }, []);
+    top = top.filter(function(it){ var t = String(it.title || ""); return t.length > 0 && t.length < 160 && t.indexOf(".css-") === -1 && t.indexOf("{") === -1; });
     if (!top.length) return;
     rendered = true;
     var html = top.map(function(it){

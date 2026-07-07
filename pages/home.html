@@ -4,118 +4,120 @@
   .wagc-redesign h1, .wagc-redesign h2 { font-family: 'Playfair Display', Georgia, serif; margin: 0; }
   .wagc-redesign a { text-decoration: none; }
   .et_pb_row_1 { display: none !important; }
-  .wagc-btn-primary { display: inline-block; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; border: none; padding: 13px 28px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
-  .wagc-btn-secondary { display: inline-block; background: transparent; color: #f4ecd8 !important; border: 1px solid #cfe0d5; padding: 12px 27px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
-  .wagc-ticker { display: flex; align-items: center; background: #08291f; color: #f4ecd8; overflow: hidden; white-space: nowrap; padding: 7px 0; }
-  .wagc-ticker-label { flex: 0 0 auto; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 4px 16px; margin-right: 16px; border-radius: 0 4px 4px 0; text-transform: uppercase; }
+  .wagc-btn-primary { display: inline-block; background: #B31942; color: #fff !important; border: none; padding: 13px 28px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
+  .wagc-btn-secondary { display: inline-block; background: transparent; color: #EAF2FC !important; border: 1px solid #C7DAF0; padding: 12px 27px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .wagc-ticker { display: flex; align-items: center; background: #0A2E56; color: #EAF2FC; overflow: hidden; white-space: nowrap; padding: 7px 0; }
+  .wagc-ticker-label { flex: 0 0 auto; background: #B31942; color: #fff !important; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 4px 16px; margin-right: 16px; border-radius: 0 4px 4px 0; text-transform: uppercase; }
   .wagc-ticker-viewport { overflow: hidden; flex: 1 1 auto; }
   .wagc-ticker-track { display: inline-flex; gap: 40px; animation: wagcTickerScroll 160s linear infinite; will-change: transform; }
   .wagc-ticker:hover .wagc-ticker-track { animation-play-state: paused; }
-  .wagc-ticker-item { display: inline-flex; align-items: center; gap: 8px; color: #f4ecd8 !important; font-size: 12px; }
-  .wagc-ticker-source { font-weight: 700; color: #d9b84a !important; font-size: 10px; letter-spacing: 0.5px; }
+  .wagc-ticker-item { display: inline-flex; align-items: center; gap: 8px; color: #EAF2FC !important; font-size: 12px; }
+  .wagc-ticker-source { font-weight: 700; color: #F09595 !important; font-size: 10px; letter-spacing: 0.5px; }
   @keyframes wagcTickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .wagc-ticker-track { animation: none; } .wagc-ticker-viewport { overflow-x: auto; } }
-  .wagc-topbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 5%; background: #08291f; color: #cfe0d5; font-size: 12px; flex-wrap: wrap; gap: 8px; }
-  .wagc-topbar a { color: #cfe0d5 !important; }
+  .wagc-topbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 5%; background: #0A2E56; color: #C7DAF0; font-size: 12px; flex-wrap: wrap; gap: 8px; }
+  .wagc-topbar a { color: #C7DAF0 !important; }
   .wagc-topbar-contact { display: flex; gap: 18px; flex-wrap: wrap; }
   @media (max-width: 480px) { .wagc-topbar-contact { gap: 10px; } .wagc-topbar { font-size: 11px; padding: 8px 4%; } }
   .wagc-social { display: flex; align-items: center; gap: 6px; }
-  .wagc-social a { display: flex; align-items: center; justify-content: center; width: 39px; height: 39px; border-radius: 50%; background: rgba(244,236,216,0.12); color: #cfe0d5 !important; transition: background 0.15s; }
-  .wagc-social a:hover { background: rgba(244,236,216,0.25); }
+  .wagc-social a { display: flex; align-items: center; justify-content: center; width: 39px; height: 39px; border-radius: 50%; background: rgba(234,242,252,0.12); color: #C7DAF0 !important; transition: background 0.15s; }
+  .wagc-social a:hover { background: rgba(234,242,252,0.25); }
   .wagc-social svg { width: 21px; height: 21px; fill: currentColor; }
-  .wagc-mainnav { display: flex; align-items: center; justify-content: space-between; padding: 12px 5%; background: #0b3d2e; flex-wrap: wrap; gap: 16px; }
+  .wagc-mainnav { display: flex; align-items: center; justify-content: space-between; padding: 12px 5%; background: radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1.4px) 0 0/26px 26px, #0C3B6E; flex-wrap: wrap; gap: 16px; }
+  .wagc-flag-stripe { height: 5px; background: repeating-linear-gradient(90deg, #B31942 0, #B31942 14px, #fff 14px, #fff 28px); }
   .wagc-logo { display: flex; align-items: center; gap: 16px; }
   .wagc-logo img.wagc-logo-round { height: 70px; width: 70px; }
-  .wagc-logo-divider { width: 1px; height: 46px; background: rgba(244,236,216,0.25); }
+  .wagc-logo-divider { width: 1px; height: 46px; background: rgba(234,242,252,0.25); }
   .wagc-logo-usa { background: #fff; border-radius: 8px; padding: 5px 8px; display: flex; align-items: center; }
   .wagc-logo-usa img { height: 46px; width: auto; display: block; }
   .wagc-nav { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
   .wagc-nav-item { position: relative; }
-  .wagc-nav-item > a, .wagc-nav-item > span { color: #f4ecd8 !important; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px; white-space: nowrap; }
-  .wagc-nav-item:hover > a, .wagc-nav-item:hover > span { color: #d9b84a !important; }
+  .wagc-nav-item > a, .wagc-nav-item > span { color: #EAF2FC !important; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+  .wagc-nav-item:hover > a, .wagc-nav-item:hover > span { color: #F09595 !important; }
   .wagc-dropdown { display: none; position: absolute; top: 100%; left: 0; margin-top: 14px; background: #fff; min-width: 190px; border-radius: 6px; padding: 8px 0; box-shadow: 0 10px 28px rgba(0,0,0,0.18); z-index: 20; }
   .wagc-dropdown::before { content: ""; position: absolute; top: -14px; left: 0; right: 0; height: 14px; }
   .wagc-nav-item:hover .wagc-dropdown { display: block; }
   .wagc-dropdown a { display: block; padding: 9px 18px; color: #2c2c2a !important; font-size: 13px; font-weight: 400 !important; }
-  .wagc-dropdown a:hover { background: #f7f6f2; color: #0b3d2e !important; }
-  .wagc-nav-cta { background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
-  .wagc-nav-toggle { display: none; background: none; border: none; color: #f4ecd8; font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 6px; }
-  .wagc-hero { position: relative; min-height: clamp(480px, calc(100vh - 160px), 660px); display: flex; align-items: flex-end; padding: 60px 5% 60px; text-align: left; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; overflow: hidden; }
+  .wagc-dropdown a:hover { background: #F3F7FC; color: #0C3B6E !important; }
+  .wagc-nav-cta { background: #B31942; color: #fff !important; padding: 10px 20px; border-radius: 4px; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
+  .wagc-nav-toggle { display: none; background: none; border: none; color: #EAF2FC; font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 6px; }
+  .wagc-hero { position: relative; min-height: clamp(480px, calc(100vh - 160px), 660px); display: flex; align-items: flex-end; padding: 60px 5% 60px; text-align: left; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0C3B6E; overflow: hidden; }
   .wagc-hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: wagcHeroFade 18s infinite; }
   .wagc-hero-slide:nth-child(1) { background-image: url('https://wagc.techcareer.se/wp-content/uploads/2026/07/els-hero.png'); animation-delay: 0s; }
   .wagc-hero-slide:nth-child(2) { background-image: url('https://wagc.techcareer.se/wp-content/uploads/2026/07/els-hero02.png'); animation-delay: 6s; }
   .wagc-hero-slide:nth-child(3) { background-image: url('https://wagc.techcareer.se/wp-content/uploads/2026/07/tanjong-hero.png'); animation-delay: 12s; }
   @keyframes wagcHeroFade { 0% { opacity: 0; } 4% { opacity: 1; } 30% { opacity: 1; } 36% { opacity: 0; } 100% { opacity: 0; } }
-  .wagc-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,18,13,0.05) 0%, rgba(4,18,13,0.3) 55%, rgba(4,18,13,0.62) 100%); }
-  .wagc-hero-inner { position: relative; z-index: 1; color: #f4ecd8; max-width: 640px; }
-  .wagc-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #d9b84a !important; margin-bottom: 16px; text-transform: uppercase; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
-  .wagc-hero h1 { font-size: 42px; line-height: 1.25; margin-bottom: 18px; color: #f4ecd8 !important; }
-  .wagc-hero p { font-size: 16px; color: #cfe0d5 !important; margin-bottom: 34px; line-height: 1.6; }
+  .wagc-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,15,26,0.05) 0%, rgba(4,15,26,0.3) 55%, rgba(4,15,26,0.62) 100%); }
+  .wagc-hero-inner { position: relative; z-index: 1; color: #EAF2FC; max-width: 640px; }
+  .wagc-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #F09595 !important; margin-bottom: 16px; text-transform: uppercase; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+  .wagc-hero h1 { font-size: 42px; line-height: 1.25; margin-bottom: 18px; color: #EAF2FC !important; }
+  .wagc-hero p { font-size: 16px; color: #C7DAF0 !important; margin-bottom: 34px; line-height: 1.6; }
   .wagc-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-  .wagc-hero-badge { position: absolute; top: 34px; right: 5%; z-index: 2; width: 300px; height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px; background: radial-gradient(circle at 35% 30%, rgba(16,46,36,0.6), rgba(6,20,15,0.65)); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 2px solid rgba(201,162,39,0.65); border-radius: 50%; box-shadow: 0 20px 46px rgba(0,0,0,0.5), inset 0 0 0 6px rgba(201,162,39,0.12); transform: rotate(-3deg); }
-  .wagc-hero-badge-script { font-family: 'Dancing Script', cursive; font-size: 33px; color: #f4ecd8 !important; line-height: 1; margin-bottom: 8px; }
-  .wagc-hero-badge-place { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 25px; line-height: 1.15; letter-spacing: 0.3px; background: linear-gradient(90deg, #8fb4ff 0%, #f588a3 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; margin-bottom: 12px; }
-  .wagc-hero-badge-date { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px; color: #d9b84a !important; letter-spacing: 0.5px; }
-  .wagc-hero-badge-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #cfe0d5 !important; margin-top: 12px; text-transform: uppercase; opacity: 0.8; }
+  .wagc-hero-badge { position: absolute; top: 34px; right: 5%; z-index: 2; width: 300px; height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px; background: #0A2E56; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 5px solid #B31942; border-radius: 50%; box-shadow: 0 20px 46px rgba(0,0,0,0.5), inset 0 0 0 3px rgba(255,255,255,0.15); }
+  .wagc-hero-badge-stars { display: flex; gap: 5px; margin-bottom: 10px; }
+  .wagc-hero-badge-script { font-family: 'Dancing Script', cursive; font-size: 33px; color: #EAF2FC !important; line-height: 1; margin-bottom: 8px; }
+  .wagc-hero-badge-place { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 25px; line-height: 1.15; letter-spacing: 0.3px; color: #fff !important; text-transform: uppercase; margin-bottom: 12px; }
+  .wagc-hero-badge-date { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px; color: #F09595 !important; letter-spacing: 0.5px; }
+  .wagc-hero-badge-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #C7DAF0 !important; margin-top: 12px; text-transform: uppercase; opacity: 0.8; }
   @media (max-width: 700px) { .wagc-hero { flex-direction: column; align-items: center; text-align: center; } .wagc-hero-badge { position: static; margin: 0 auto 24px; transform: none; width: 260px; height: auto; border-radius: 20px; padding: 22px 18px; } .wagc-hero-inner { max-width: 100%; } .wagc-hero-ctas { justify-content: center; } }
-  .wagc-stats { display: grid; grid-template-columns: repeat(4, 1fr); background: #f4ecd8; text-align: center; }
-  .wagc-stats div { padding: 28px 10px; border-right: 1px solid #ddd0ab; }
+  .wagc-stats { display: grid; grid-template-columns: repeat(4, 1fr); background: #EAF2FC; text-align: center; }
+  .wagc-stats div { padding: 28px 10px; border-right: 1px solid #C7DAF0; }
   .wagc-stats div:last-child { border-right: none; }
-  .wagc-stat-num { font-family: 'Playfair Display', Georgia, serif; font-size: 30px; color: #0b3d2e !important; }
+  .wagc-stat-num { font-family: 'Playfair Display', Georgia, serif; font-size: 30px; color: #0C3B6E !important; }
   .wagc-stat-label { font-size: 13px; color: #5f5e5a !important; margin-top: 4px; }
   .wagc-section { padding: 64px 5%; }
   .wagc-section-title { font-size: 26px; text-align: center; margin-bottom: 8px; color: #2c2c2a !important; }
   .wagc-section-sub { font-size: 14px; color: #5f5e5a !important; text-align: center; margin-bottom: 40px; }
   .wagc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .wagc-step-card { background: #fff; border-top: 3px solid #c9a227; border-radius: 0 0 8px 8px; padding: 30px 24px; text-align: center; box-shadow: 0 1px 3px rgba(11,61,46,0.06); }
+  .wagc-step-card { background: #fff; border-top: 3px solid #B31942; border-radius: 0 0 8px 8px; padding: 30px 24px; text-align: center; box-shadow: 0 1px 3px rgba(12,59,110,0.06); }
   .wagc-step-card svg { margin-bottom: 14px; }
   .wagc-step-card h3 { font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #2c2c2a !important; }
   .wagc-step-card p { font-size: 14px; color: #5f5e5a !important; line-height: 1.6; margin: 0; }
   .wagc-tourn-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
   .wagc-tourn-head h2 { font-size: 24px; color: #2c2c2a !important; }
-  .wagc-tourn-head a { font-size: 14px; color: #0b3d2e !important; font-weight: 600; }
+  .wagc-tourn-head a { font-size: 14px; color: #0C3B6E !important; font-weight: 600; }
   .wagc-tourn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .wagc-tourn-card { display: block; background: #fff; border-top: 3px solid #c9a227; border-radius: 0 0 8px 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(11,61,46,0.06); }
-  .wagc-tourn-img { height: 130px; background-color: #f4ecd8; background-size: contain; background-repeat: no-repeat; background-position: center; background-origin: content-box; padding: 22px; box-sizing: border-box; }
+  .wagc-tourn-card { display: block; background: #fff; border-top: 3px solid #B31942; border-radius: 0 0 8px 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(12,59,110,0.06); }
+  .wagc-tourn-img { height: 130px; background-color: #EAF2FC; background-size: contain; background-repeat: no-repeat; background-position: center; background-origin: content-box; padding: 22px; box-sizing: border-box; }
   .wagc-tourn-body { padding: 16px; }
-  .wagc-tourn-tag { font-size: 11px; color: #0b3d2e !important; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .wagc-tourn-tag { font-size: 11px; color: #0C3B6E !important; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; }
   .wagc-tourn-name { font-size: 15px; font-weight: 600; color: #2c2c2a !important; }
   .wagc-tourn-date { font-size: 13px; color: #5f5e5a !important; margin-top: 6px; }
-  .wagc-cta { padding: 56px 5%; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; text-align: center; }
-  .wagc-cta h2 { color: #f4ecd8 !important; font-size: 26px; margin-bottom: 10px; }
-  .wagc-cta p { color: #cfe0d5 !important; font-size: 14px; margin-bottom: 26px; }
-  .wagc-final-section { padding: 68px 5%; background: repeating-linear-gradient(115deg, rgba(11,61,46,0.025) 0px, rgba(11,61,46,0.025) 2px, transparent 2px, transparent 34px), #f7f6f2; }
+  .wagc-cta { padding: 56px 5%; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0C3B6E; text-align: center; }
+  .wagc-cta h2 { color: #EAF2FC !important; font-size: 26px; margin-bottom: 10px; }
+  .wagc-cta p { color: #C7DAF0 !important; font-size: 14px; margin-bottom: 26px; }
+  .wagc-final-section { padding: 68px 5%; background: repeating-linear-gradient(115deg, rgba(12,59,110,0.025) 0px, rgba(12,59,110,0.025) 2px, transparent 2px, transparent 34px), #F3F7FC; }
   .wagc-final-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; max-width: 1180px; margin: 0 auto; }
-  .wagc-final-video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 0 0 3px rgba(201,162,39,0.55), 0 16px 40px rgba(11,61,46,0.22); }
+  .wagc-final-video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 0 0 3px rgba(179,25,66,0.55), 0 16px 40px rgba(12,59,110,0.22); }
   .wagc-final-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-  .wagc-final-eyebrow { font-size: 12px; letter-spacing: 3px; color: #c9a227 !important; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+  .wagc-final-eyebrow { font-size: 12px; letter-spacing: 3px; color: #B31942 !important; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
   .wagc-final-text h2 { font-size: 30px; color: #2c2c2a !important; margin-bottom: 8px; position: relative; padding-bottom: 16px; }
-  .wagc-final-text h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 60px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #e8c766, #c9a227); }
+  .wagc-final-text h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 60px; height: 3px; border-radius: 2px; background: #B31942; }
   .wagc-final-text p { font-size: 15px; line-height: 1.7; color: #444341; margin: 18px 0 22px; }
   .wagc-final-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-  .wagc-final-list li { display: flex; align-items: center; gap: 14px; font-size: 14px; font-weight: 600; line-height: 1.4; color: #2c2c2a; background: #fff; border-left: 3px solid #c9a227; border-radius: 0 8px 8px 0; padding: 13px 16px; box-shadow: 0 1px 4px rgba(11,61,46,0.07); transition: transform 0.15s, box-shadow 0.15s; }
-  .wagc-final-list li:hover { transform: translateX(3px); box-shadow: 0 4px 12px rgba(11,61,46,0.12); }
-  .wagc-final-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
+  .wagc-final-list li { display: flex; align-items: center; gap: 14px; font-size: 14px; font-weight: 600; line-height: 1.4; color: #2c2c2a; background: #fff; border-left: 3px solid #B31942; border-radius: 0 8px 8px 0; padding: 13px 16px; box-shadow: 0 1px 4px rgba(12,59,110,0.07); transition: transform 0.15s, box-shadow 0.15s; }
+  .wagc-final-list li:hover { transform: translateX(3px); box-shadow: 0 4px 12px rgba(12,59,110,0.12); }
+  .wagc-final-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: #B31942; color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
   .wagc-map-wrap { max-width: 1180px; margin: 40px auto 0; }
-  .wagc-map-wrap h3 { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #0b3d2e !important; margin-bottom: 16px; text-align: center; }
-  #wagcCoursesMap { height: 420px; border-radius: 10px; box-shadow: 0 0 0 3px rgba(201,162,39,0.35), 0 10px 28px rgba(11,61,46,0.15); }
+  .wagc-map-wrap h3 { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #0C3B6E !important; margin-bottom: 16px; text-align: center; }
+  #wagcCoursesMap { height: 420px; border-radius: 10px; box-shadow: 0 0 0 3px rgba(179,25,66,0.35), 0 10px 28px rgba(12,59,110,0.15); }
   @media (max-width: 900px) { .wagc-final-grid { grid-template-columns: 1fr; } }
   html { overflow-x: hidden; }
-  .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-hero, .wagc-stats, .wagc-section, .wagc-final-section, .wagc-cta { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }
+  .wagc-flag-stripe, .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-hero, .wagc-stats, .wagc-section, .wagc-final-section, .wagc-cta { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }
   @media (max-width: 980px) {
     .wagc-mainnav { position: relative; flex-wrap: nowrap; }
     .wagc-nav-toggle { display: block; }
-    .wagc-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; position: absolute; top: 100%; left: 0; background: #0b3d2e; padding: 10px 5% 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.3); z-index: 40; }
+    .wagc-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; position: absolute; top: 100%; left: 0; background: #0C3B6E; padding: 10px 5% 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.3); z-index: 40; }
     .wagc-nav.wagc-nav-open { display: flex; }
     .wagc-nav-item { width: 100%; }
     .wagc-nav-item > a, .wagc-nav-item > span { padding: 12px 0; width: 100%; justify-content: space-between; }
     .wagc-dropdown { display: none; position: static; box-shadow: none; margin-top: 0; padding-left: 14px; background: transparent; border-radius: 0; }
     .wagc-dropdown::before { display: none; }
     .wagc-nav-item.wagc-dropdown-open .wagc-dropdown { display: block; }
-    .wagc-dropdown a { color: #cfe0d5 !important; padding: 9px 0; }
+    .wagc-dropdown a { color: #C7DAF0 !important; padding: 9px 0; }
     .wagc-nav-cta { width: 100%; text-align: center; margin-top: 10px; }
   }
-  @media (max-width: 900px) { .wagc-stats, .wagc-steps, .wagc-tourn-grid { grid-template-columns: 1fr; } .wagc-stats div { border-right: none; border-bottom: 1px solid #ddd0ab; } .wagc-hero h1 { font-size: 30px; } }
+  @media (max-width: 900px) { .wagc-stats, .wagc-steps, .wagc-tourn-grid { grid-template-columns: 1fr; } .wagc-stats div { border-right: none; border-bottom: 1px solid #C7DAF0; } .wagc-hero h1 { font-size: 30px; } }
   /* mobile-480 */
   @media (max-width: 480px) { .wagc-hero { min-height: 520px; padding: 40px 6% 40px; } .wagc-hero h1 { font-size: 24px; } .wagc-hero p { font-size: 14px; margin-bottom: 24px; } .wagc-hero-ctas { flex-direction: column; align-items: stretch; } .wagc-hero-ctas a { text-align: center; width: 100%; } .wagc-hero-badge { width: 220px; padding: 18px 14px; } .wagc-hero-badge-place { font-size: 19px; } .wagc-hero-badge-script { font-size: 24px; } }
   @media (max-width: 600px) { #wagcCoursesMap { height: 300px; } }
@@ -125,6 +127,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <div class="wagc-redesign">
+
+  <div class="wagc-flag-stripe"></div>
 
   <div class="wagc-topbar">
     <div class="wagc-topbar-contact">
@@ -181,6 +185,11 @@
     <div class="wagc-hero-slide"></div>
     <div class="wagc-hero-slide"></div>
     <div class="wagc-hero-badge">
+      <div class="wagc-hero-badge-stars">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg>
+      </div>
       <div class="wagc-hero-badge-script">The Race to</div>
       <div class="wagc-hero-badge-place">Desaru Coast<br>Johor Bahru</div>
       <div class="wagc-hero-badge-date">October 23&ndash;31, 2026</div>
@@ -209,24 +218,24 @@
     <p class="wagc-section-sub">Three steps from local tee time to national colors.</p>
     <div class="wagc-steps">
       <div class="wagc-step-card">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0b3d2e" stroke-width="1.7"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0C3B6E" stroke-width="1.7"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
         <h3>1. Play a local event</h3>
         <p>Enter a regional tournament near you, open to every skill level.</p>
       </div>
       <div class="wagc-step-card">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0b3d2e" stroke-width="1.7"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 5H4a3 3 0 0 0 3 4M17 5h3a3 3 0 0 1-3 4"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0C3B6E" stroke-width="1.7"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 5H4a3 3 0 0 0 3 4M17 5h3a3 3 0 0 1-3 4"/></svg>
         <h3>2. Qualify at a major</h3>
         <p>Top finishers advance to national-level majors across the country.</p>
       </div>
       <div class="wagc-step-card">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0b3d2e" stroke-width="1.7"><path d="M5 3v18M5 4h13l-2.5 3.5L18 11H5"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0C3B6E" stroke-width="1.7"><path d="M5 3v18M5 4h13l-2.5 3.5L18 11H5"/></svg>
         <h3>3. Represent Team USA</h3>
         <p>Earn your spot at the World Final and compete on the global stage.</p>
       </div>
     </div>
   </section>
 
-  <section class="wagc-section" style="background:#f7f6f2; padding-top:56px; padding-bottom:56px;">
+  <section class="wagc-section" style="background:#F3F7FC; padding-top:56px; padding-bottom:56px;">
     <div class="wagc-tourn-head">
       <h2>Upcoming tournaments</h2>
       <a href="https://wagc.techcareer.se/index.php/tournaments/">View full schedule &rarr;</a>
@@ -313,7 +322,7 @@
 </script>
 <script>
 (function(){
-  var SEL = '.wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-hero, .wagc-stats, .wagc-section, .wagc-final-section, .wagc-cta';
+  var SEL = '.wagc-flag-stripe, .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-hero, .wagc-stats, .wagc-section, .wagc-final-section, .wagc-cta';
   function fixFullBleed(){
     var vw = window.innerWidth;
     var half = vw / 2;

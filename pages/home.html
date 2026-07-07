@@ -36,6 +36,7 @@
   .wagc-dropdown a { display: block; padding: 9px 18px; color: #2c2c2a !important; font-size: 13px; font-weight: 400 !important; }
   .wagc-dropdown a:hover { background: #f7f6f2; color: #0b3d2e !important; }
   .wagc-nav-cta { background: linear-gradient(180deg, #e8c766, #c9a227); color: #2c2205 !important; padding: 10px 20px; border-radius: 4px; box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset; }
+  .wagc-nav-toggle { display: none; background: none; border: none; color: #f4ecd8; font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 6px; }
   .wagc-hero { position: relative; min-height: 660px; display: flex; align-items: flex-end; padding: 60px 5% 60px; text-align: left; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 2px, transparent 2px, transparent 34px), #0b3d2e; overflow: hidden; }
   .wagc-hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: wagcHeroFade 18s infinite; }
   .wagc-hero-slide:nth-child(1) { background-image: url('https://wagc.techcareer.se/wp-content/uploads/2026/07/els-hero.png'); animation-delay: 0s; }
@@ -98,8 +99,23 @@
   @media (max-width: 900px) { .wagc-final-grid { grid-template-columns: 1fr; } }
   html { overflow-x: hidden; }
   .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-hero, .wagc-stats, .wagc-section, .wagc-final-section, .wagc-cta { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }
-  @media (max-width: 980px) { .wagc-nav { gap: 16px; } .wagc-dropdown { position: static; box-shadow: none; margin-top: 4px; padding-left: 12px; } }
+  @media (max-width: 980px) {
+    .wagc-mainnav { position: relative; flex-wrap: nowrap; }
+    .wagc-nav-toggle { display: block; }
+    .wagc-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; position: absolute; top: 100%; left: 0; background: #0b3d2e; padding: 10px 5% 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.3); z-index: 40; }
+    .wagc-nav.wagc-nav-open { display: flex; }
+    .wagc-nav-item { width: 100%; }
+    .wagc-nav-item > a, .wagc-nav-item > span { padding: 12px 0; width: 100%; justify-content: space-between; }
+    .wagc-dropdown { display: none; position: static; box-shadow: none; margin-top: 0; padding-left: 14px; background: transparent; border-radius: 0; }
+    .wagc-nav-item.wagc-dropdown-open .wagc-dropdown { display: block; }
+    .wagc-dropdown a { color: #cfe0d5 !important; padding: 9px 0; }
+    .wagc-nav-cta { width: 100%; text-align: center; margin-top: 10px; }
+  }
   @media (max-width: 900px) { .wagc-stats, .wagc-steps, .wagc-tourn-grid { grid-template-columns: 1fr; } .wagc-stats div { border-right: none; border-bottom: 1px solid #ddd0ab; } .wagc-hero h1 { font-size: 30px; } }
+  /* mobile-480 */
+  @media (max-width: 480px) { .wagc-hero { min-height: 520px; padding: 40px 6% 40px; } .wagc-hero h1 { font-size: 24px; } .wagc-hero p { font-size: 14px; margin-bottom: 24px; } .wagc-hero-ctas { flex-direction: column; align-items: stretch; } .wagc-hero-ctas a { text-align: center; width: 100%; } .wagc-hero-badge { width: 200px; height: 200px; padding: 18px; } .wagc-hero-badge-place { font-size: 20px; } .wagc-hero-badge-script { font-size: 26px; } }
+  @media (max-width: 600px) { #wagcCoursesMap { height: 300px; } }
+  @media (max-width: 480px) { .wagc-final-text h2 { font-size: 24px; } }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -124,6 +140,7 @@
         <img src="https://wagc.us/wp-content/uploads/2017/08/wagc-logo-team-usa.png" alt="Team USA">
       </div>
     </a>
+    <button class="wagc-nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
     <nav class="wagc-nav">
       <div class="wagc-nav-item"><a href="https://wagc.techcareer.se/index.php/tournaments/">Tournaments</a></div>
       <div class="wagc-nav-item">
@@ -306,6 +323,32 @@
   }
   fixFullBleed();
   window.addEventListener('resize', fixFullBleed);
+})();
+</script>
+<script>
+(function(){
+  var toggle = document.querySelector('.wagc-nav-toggle');
+  var nav = document.querySelector('.wagc-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('wagc-nav-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  var items = document.querySelectorAll('.wagc-nav-item');
+  for (var i = 0; i < items.length; i++) {
+    (function(item){
+      var dropdown = item.querySelector('.wagc-dropdown');
+      var trigger = item.querySelector(':scope > span');
+      if (!dropdown || !trigger) return;
+      trigger.addEventListener('click', function(e){
+        if (window.matchMedia('(max-width: 980px)').matches) {
+          e.preventDefault();
+          item.classList.toggle('wagc-dropdown-open');
+        }
+      });
+    })(items[i]);
+  }
 })();
 </script>
 <script>

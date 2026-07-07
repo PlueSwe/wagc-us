@@ -15,6 +15,8 @@
   @media (prefers-reduced-motion: reduce) { .wagc-ticker-track { animation: none; } .wagc-ticker-viewport { overflow-x: auto; } }
   .wagc-topbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 5%; background: #08291f; color: #cfe0d5; font-size: 12px; flex-wrap: wrap; gap: 8px; }
   .wagc-topbar a { color: #cfe0d5 !important; }
+  .wagc-topbar-contact { display: flex; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 600px) { .wagc-topbar-contact { flex-direction: column; align-items: flex-start; gap: 4px; } }
   .wagc-social { display: flex; align-items: center; gap: 6px; }
   .wagc-social a { display: flex; align-items: center; justify-content: center; width: 39px; height: 39px; border-radius: 50%; background: rgba(244,236,216,0.12); color: #cfe0d5 !important; transition: background 0.15s; }
   .wagc-social a:hover { background: rgba(244,236,216,0.25); }
@@ -83,7 +85,7 @@
 <div class="wagc-redesign">
 
   <div class="wagc-topbar">
-    <div style="display:flex; gap:18px; flex-wrap:wrap;">
+    <div class="wagc-topbar-contact">
       <span>☎ (978) 309-9242</span>
       <span>✉ info@wagc.us</span>
     </div>

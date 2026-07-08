@@ -50,12 +50,13 @@
   .wagc-about-section p { font-size: 15px; line-height: 1.7; color: #444341; margin: 0 0 14px; }
   .wagc-about-section p:last-child { margin-bottom: 0; }
   .wagc-history-founder { max-width: 860px; margin: 0 auto 46px; display: grid; grid-template-columns: 300px 1fr; gap: 36px; align-items: center; }
-  .wagc-history-logo-card { background: #fff; border-top: 3px solid #B31942; border-radius: 0 0 10px 10px; padding: 30px; box-shadow: 0 1px 3px rgba(12,59,110,0.08); text-align: center; }
-  .wagc-history-logo-card img { width: 100%; height: auto; display: block; }
+  .wagc-history-portrait { margin: 0; background: #fff; border-top: 3px solid #B31942; border-radius: 0 0 10px 10px; padding: 0 0 14px; box-shadow: 0 1px 3px rgba(12,59,110,0.08); overflow: hidden; text-align: center; }
+  .wagc-history-portrait img { width: 100%; height: auto; display: block; }
+  .wagc-history-portrait figcaption { font-size: 12px; color: #5f5e5a; padding: 12px 14px 0; }
   .wagc-history-founder h2 { font-size: 22px; color: #0C3B6E !important; margin-bottom: 14px; }
   .wagc-history-founder p { font-size: 15px; line-height: 1.7; color: #444341; margin: 0 0 14px; }
   .wagc-history-founder p:last-child { margin-bottom: 0; }
-  @media (max-width: 760px) { .wagc-history-founder { grid-template-columns: 1fr; gap: 24px; } .wagc-history-logo-card { max-width: 300px; margin: 0 auto; } }
+  @media (max-width: 760px) { .wagc-history-founder { grid-template-columns: 1fr; gap: 24px; } .wagc-history-portrait { max-width: 300px; margin: 0 auto; } }
   .wagc-history-quote { max-width: 860px; margin: 0 auto 46px; background: #0C3B6E; border-radius: 12px; padding: 40px 34px; text-align: center; }
   .wagc-history-quote p { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; line-height: 1.4; color: #EAF2FC !important; margin: 0; font-style: italic; }
   @media (max-width: 480px) { .wagc-history-quote p { font-size: 19px; } }
@@ -166,9 +167,10 @@
   <div class="wagc-about-wrap">
 
     <div class="wagc-history-founder">
-      <div class="wagc-history-logo-card">
-        <img src="https://wagcgolfers.com/wp-content/uploads/2024/12/wagc-logo-corporate-3.png" alt="World Amateur Golfers Championship">
-      </div>
+      <figure class="wagc-history-portrait">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sven_Tumba_SOK.jpg/500px-Sven_Tumba_SOK.jpg" alt="Sven Tumba, founder of the World Amateur Golfers Championship">
+        <figcaption>Sven Tumba, c. 1960</figcaption>
+      </figure>
       <div>
         <h2>Founded by Sven Tumba</h2>
         <p>The World Amateur Golfers Championship was founded in 1995 by Sven Tumba &mdash; one of the most prominent sports icons of all time, representing Sweden in ice hockey, soccer, and golf.</p>

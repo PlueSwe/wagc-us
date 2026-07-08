@@ -192,7 +192,7 @@
 (function(){
   var SEL = '.wagc-flag-stripe, .wagc-ticker, .wagc-topbar, .wagc-mainnav, .wagc-about-hero, .wagc-about-wrap, .wagc-cta';
   function fixFullBleed(){
-    var vw = window.innerWidth;
+    var vw = document.documentElement.clientWidth;
     var half = vw / 2;
     var els = document.querySelectorAll(SEL);
     for (var i = 0; i < els.length; i++) {
